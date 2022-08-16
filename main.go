@@ -10,6 +10,7 @@ func main() {
 	app := fiber.New()
 	app.Use(logger.New())
 	app.Use(recover.New())
+	app.Group("/user")
 
 	app.Listen(":3030")
 }
